@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<title>Adresinden</title>
+	<meta charset="utf-8">	
+	<meta name="description" content="En doğru ilanlar">
+	<meta name="keywords" content="Sahibinden, Hürriyet Emlak, Milliyet Emlak, Remax, Türyap, Century21, Coldwell Banker, Reality World">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://adresinden.com/mobile/asset/css/index.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://adresinden.com/mobile/asset/js/index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>	
+</head>
+<body ng-app="main_app" ng-controller="main_cont">
+	<input type="hidden" id="emlkk_durum" value="{{emlkk_durum}}">
+	<input type="hidden" id="emlkk_kategori" value="{{emlkk_kategori}}">
+	<input type="hidden" id="kaynak" value=""> 
+	
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		  <img class="navbar-brand" src="https://adresinden.com/mobile/asset/img/adresinden_logo_1.png" style="height:50px; padding:5px;">
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="">adresinden.com nedir?</a>
+				</li>
+				<li><a href="">hakkımızda</a>
+				</li>
+				<li><a href="">iletişim</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+	</nav>
+	<div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center well" style="margin-bottom:10px;">
+			İlan Detaylarını Seçiniz
+		</div>
+		<form role="form" style="margin-bottom:10px; text-align:center;">  						
+			<div class="btn-group btn-group-md" id="emlk_durum">
+				<button type="button" data-switch-set="size" data-switch-value="normal" ng-click="emlk_d_change($event);" class="btn btn-default btn-lg" data-id="2" >Kiralık</button>
+				<button type="button" data-switch-set="size" data-switch-value="normal" ng-click="emlk_d_change($event);" class="btn btn-default btn-lg" data-id="1">Satılık</button>
+			</div>
+		</form>
+		<form role="form" style="margin-bottom:10px; text-align:center;">  						
+			<div class="btn-group btn-group-md" id="emlk_kategori">
+				<button type="button" data-switch-set="size" data-switch-value="normal" ng-click="emlk_d_change($event);" class="btn btn-default btn-lg" data-id="1">Konut</button>
+				<button type="button" data-switch-set="size" data-switch-value="normal" ng-click="emlk_d_change($event);" class="btn btn-default btn-lg" data-id="3">Arsa</button>
+				<button type="button" data-switch-set="size" data-switch-value="normal" ng-click="emlk_d_change($event);" class="btn btn-default btn-lg" data-id="2">İşyeri</button>
+			</div>
+		</form>
+
+		<form role="form" style="margin-bottom:10px; text-align:center;">  						
+			<div class="btn-group btn-group-md kaynak">
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Sahibinden" data-switch-value="normal" class="btn btn-default btn-lg" data-id="1"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/sah.png"></button>
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Milliyet" data-switch-value="normal" class="btn btn-default btn-lg" data-id="2"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/mil.png"></button>
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Hürriyet" data-switch-value="normal" class="btn btn-default btn-lg" data-id="3"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/hur.png"></button>				
+			</div>
+		</form>		 
+		<form role="form" style="margin-bottom:10px; text-align:center;">  						
+			<div class="btn-group btn-group-md kaynak">
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Remax" data-switch-value="normal" class="btn btn-default btn-lg" data-id="4"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/remax.png"></button>
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Realty" data-switch-value="normal" class="btn btn-default btn-lg" data-id="5"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/realty.png"></button>
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Century21" data-switch-value="normal" class="btn btn-default btn-lg" data-id="6"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/Century21.png"></button>		
+			</div>
+		</form>
+		<form role="form" style="margin-bottom:20px; text-align:center;">	
+			<div class="btn-group btn-group-md kaynak">
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Turyap" data-switch-value="normal" class="btn btn-default btn-lg" data-id="7"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/turyap.png"></button>
+				<button type="button" style="padding:1px;" data-switch-set="size" data-val="Coldwellbanker" data-switch-value="normal" class="btn btn-default btn-lg" data-id="8"><img class="img-responsive" src="https://adresinden.com/mobile/asset/img/coldwellbanker.png"></button>									
+			</div>
+		</form>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+			<button type="button" class="btn btn-lg" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="kaynak2"></span> <span>{{durum_ad}}</span> <span class="kategori_ad"></span> Ara</button>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+			<button type="button" class="btn btn-lg" style="margin-bottom:20px; white-space: normal;" id="near"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Yakınımda <span class="kaynak2"></span> <span class="durum_ad"></span> <span class="kategori_ad"></span> Ara</button>
+		</div>
+	<script>
+		var app = angular.module("main_app", []);
+		app.controller("main_cont", function($scope) {
+			$scope.emlk_d_change = function(e) {
+				var button = e.currentTarget;
+				angular.element(button).addClass('btn-primary').siblings().removeClass('btn-primary');
+				var data_id=angular.element(button).attr('data-id');
+				var clicked_text=angular.element(button).text();
+				$scope.durum_ad=clicked_text;								
+				if(data_id==2){
+					$scope.emlkk_durum=data_id;
+				}else if(data_id==1){      
+					$scope.emlkk_durum=data_id;
+				} 									
+			}
+		});
+	
+	</script>
+</body>
+
+</html>
